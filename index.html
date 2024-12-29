@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@100;300;400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- LINK CSS -->
+    <link rel="stylesheet" href="style.css" />
+    <title>API</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="titulo">Consultar CEP</h1>
+      <div class="container_botao_input">
+        <input id="input_cep" type="text" placeholder="Digite o cep aqui" />
+        <button id="botao_consultar">Consultar</button>
+      </div>
+    </div>
+
+    <div class="modal">
+      <div class="container_modal">
+        <div class="resultado">
+          <p><strong>CEP:</strong> 06516-080</p>
+          <p><strong>Logradouro:</strong> Rua Florença</p>
+          <p><strong>Bairro:</strong> Jardim Isaura</p>
+          <p><strong>Cidade:</strong> Santana de Parnaíba</p>
+          <p><strong>Estado:</strong> São Paulo</p>
+        </div>
+
+        <button class="fechar_modal">X</button>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

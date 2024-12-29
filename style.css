@@ -1,0 +1,154 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", serif;
+}
+
+:root {
+  --bg-container: #e1e4e6;
+  --bg-botao: #2597e3;
+  --bg-botao-active: #176da6;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  margin: 150px auto 0px auto;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  padding: 10px 20px;
+  box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.4);
+  background-color: var(--bg-container);
+}
+
+.titulo {
+  font-size: 3.5rem;
+}
+
+.container_botao_input {
+  display: flex;
+  width: 100%;
+}
+
+#input_cep {
+  width: 100%;
+  padding: 10px 0 10px 10px;
+  outline: none;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 15px 0px 0px 15px;
+}
+
+#botao_consultar {
+  font-size: 1.1rem;
+  font-weight: 600;
+  padding: 0px 10px;
+  border: none;
+  border-radius: 0px 15px 15px 0px;
+  cursor: pointer;
+
+  background-color: var(--bg-botao);
+  color: white;
+
+  transition: 0.5s linear;
+}
+
+#botao_consultar:active {
+  background-color: var(--bg-botao-active);
+  transform: scale(0.9);
+}
+
+.modal {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  top: 0;
+  left: 0;
+
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.modal.mostrar {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.container_modal {
+  background-color: var(--bg-container);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  width: 90%;
+  max-width: 500px;
+  margin-bottom: 130px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+
+  transform: scale(0.9);
+  transition: transform 0.3s ease;
+}
+
+.container_modal.mostrar {
+  transform: scale(1);
+}
+
+.fechar_modal {
+  background-color: var(--bg-botao);
+  color: white;
+  font-size: 1.6rem;
+  height: 50px;
+  width: 50px;
+  padding: 5px;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  margin-top: 30px;
+  transition: 0.5s linear;
+}
+
+.fechar_modal:active {
+  background-color: var(--bg-botao-active);
+  transform: scale(0.9);
+}
+
+.resultado {
+  margin: 10px 0;
+  width: 100%;
+  text-align: center;
+  font-size: 1.2rem;
+}
+
+.resultado p {
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  border-bottom: 2px solid var(--bg-botao);
+  font-size: 1.2rem;
+  padding: 0 5px 0 0;
+}
+
+.resultado p strong {
+  background-color: var(--bg-botao);
+  padding: 5px;
+  border: 2px solid var(--bg-botao);
+  border-radius: 5px;
+  color: white;
+  margin-bottom: 5px;
+}
